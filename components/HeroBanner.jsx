@@ -4,18 +4,31 @@ import { ChevronDown } from 'lucide-react';
 
 const HeroBanner = () => {
   const { t } = useContext(LanguageContext);
-  const heroImage = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&h=900&fit=crop';
+  // Imagen horizontal para desktop
+  const heroImageDesktop = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&h=900&fit=crop';
+  // Imagen vertical para móvil
+  const heroImageMobile = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=900&fit=crop';
 
   return (
     <section
-      className="relative w-full h-96 sm:h-full md:h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(31, 41, 55, 0.6) 100%), url(${heroImage})`,
+        backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(31, 41, 55, 0.6) 100%), url(${heroImageDesktop})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="text-center text-white px-4 sm:px-6 md:px-12 max-w-3xl">
+      {/* Overlay móvil con imagen vertical */}
+      <div
+        className="absolute inset-0 sm:hidden"
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(31, 41, 55, 0.6) 100%), url(${heroImageMobile})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+
+      <div className="relative text-center text-white px-4 sm:px-6 md:px-12 max-w-3xl z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
           {t.discoverWorld}
         </h1>

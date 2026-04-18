@@ -15,20 +15,20 @@ export default function NationalPackages() {
 
   return (
     <>
-      <section className="bg-gray-900 text-white py-12 sm:py-16 px-6">
+      <section className="bg-gray-900 text-white py-6 sm:py-8 md:py-12 lg:py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Paquetes <span className="text-red-500">Nacionales</span>
           </h1>
-          <p className="text-gray-300 text-lg sm:text-xl max-w-2xl">
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl">
             Descubre las maravillas de Sudamérica. Desde los desiertos más espectaculares hasta antiguos sitios arqueológicos.
           </p>
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-6">
+      <section className="py-6 sm:py-8 md:py-12 lg:py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {packages.map((pkg) => (
               <PackageCard
                 key={pkg.id}

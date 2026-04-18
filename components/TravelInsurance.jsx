@@ -14,21 +14,21 @@ export default function TravelInsurance() {
 
   return (
     <>
-      <section className="bg-gray-900 text-white py-12 sm:py-16 px-6">
+      <section className="bg-gray-900 text-white py-6 sm:py-8 md:py-12 lg:py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Seguro de <span className="text-red-500">Viajes</span></h1>
-          <p className="text-gray-300 text-lg sm:text-xl max-w-2xl">Viaja con seguridad. Cobertura médica completa y asistencia en el mundo entero.</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Seguro de <span className="text-red-500">Viajes</span></h1>
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl">Viaja con seguridad. Cobertura médica completa y asistencia en el mundo entero.</p>
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-6">
+      <section className="py-6 sm:py-8 md:py-12 lg:py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-2 mb-12">
+          <div className="flex items-center gap-2 mb-8 sm:mb-12">
             <Shield size={32} className="text-red-500" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Elige tu plan de protección</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">Elige tu plan de protección</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {plans.map((plan) => (
               <div key={plan.id} className={`rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 ${plan.recommended ? 'ring-4 ring-orange-500 scale-105 md:scale-110' : 'border-2 border-gray-200'}`}>
                 {plan.recommended && <div className="bg-orange-500 text-white text-center py-2 font-bold">RECOMENDADO</div>}

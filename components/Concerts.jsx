@@ -14,22 +14,22 @@ export default function Concerts() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-red-600 to-orange-600 py-12 sm:py-16 px-6">
+      <section className="bg-gradient-to-br from-red-600 to-orange-600 py-6 sm:py-8 md:py-12 lg:py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <Music size={40} className="text-yellow-300" />
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">Conciertos & Experiencias</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Conciertos & Experiencias</h1>
           </div>
-          <p className="text-gray-100 text-lg sm:text-xl max-w-2xl">Vive la música en directo con paquetes premium que incluyen alojamiento, traslados y experiencias VIP.</p>
+          <p className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl">Vive la música en directo con paquetes premium que incluyen alojamiento, traslados y experiencias VIP.</p>
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-6 bg-black">
+      <section className="py-6 sm:py-8 md:py-12 lg:py-20 px-6 bg-black">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {concerts.map((concert) => (
               <div key={concert.id} className="group relative rounded-lg overflow-hidden shadow-2xl hover:shadow-3xl transition cursor-pointer" onClick={() => setSelectedConcert(concert)}>
-                <div className="relative h-96 overflow-hidden">
+                <div className="relative h-72 sm:h-80 md:h-96 overflow-hidden">
                   <img src={concert.image} alt={concert.artist} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                   <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8 text-white">

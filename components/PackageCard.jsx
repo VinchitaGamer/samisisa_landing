@@ -11,7 +11,7 @@ const PackageCard = ({ image, title, description, price, onBooking, onViewDetail
   return (
     <div className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
       {/* Image Container with Controls */}
-      <div className="relative h-48 sm:h-56 overflow-hidden bg-gray-200">
+      <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden bg-gray-200">
         <img
           src={image}
           alt={title}
@@ -48,9 +48,9 @@ const PackageCard = ({ image, title, description, price, onBooking, onViewDetail
       </div>
 
       {/* Content */}
-      <div className="p-6 sm:p-8">
+      <div className="p-4 sm:p-5 md:p-6">
         {/* Title */}
-        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">
+        <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">
           {title}
         </h3>
 
@@ -64,13 +64,13 @@ const PackageCard = ({ image, title, description, price, onBooking, onViewDetail
           <span className="text-xs sm:text-sm font-semibold text-orange-500 uppercase tracking-wide">
             Desde
           </span>
-          <span className="text-2xl sm:text-3xl font-bold text-red-500">${price}</span>
+          <span className="text-xl sm:text-2xl md:text-3xl font-bold text-red-500">${price}</span>
         </div>
 
         {/* CTA Button */}
         <button
           onClick={onViewDetails}
-          className="w-full px-4 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-red-500 transition-all duration-300 transform hover:scale-105 shadow-md"
+          className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-red-500 transition-all duration-300 transform hover:scale-105 shadow-md min-h-[44px] flex items-center justify-center"
         >
           Ver Detalles
         </button>

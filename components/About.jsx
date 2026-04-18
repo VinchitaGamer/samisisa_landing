@@ -7,23 +7,23 @@ export default function About() {
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gray-900 text-white py-12 sm:py-16 px-6">
+      <section className="bg-gray-900 text-white py-6 sm:py-8 md:py-12 lg:py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             {t.aboutTitle} <span className="text-red-500">Sami Sisa</span>
           </h1>
-          <p className="text-gray-300 text-lg sm:text-xl max-w-2xl">
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl">
             Más de 20 años conectando viajeros con experiencias extraordinarias en Sudamérica.
           </p>
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-6">
+      <section className="py-6 sm:py-8 md:py-12 lg:py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-8 sm:mb-12 md:mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t.aboutMission}</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">{t.aboutMission}</h2>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                 {t.aboutMissionDesc}
               </p>
             </div>
@@ -35,9 +35,9 @@ export default function About() {
             />
           </div>
 
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 p-12 rounded-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t.aboutWhy}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 sm:p-8 md:p-12 rounded-lg">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">{t.aboutWhy}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe size={32} className="text-white" />

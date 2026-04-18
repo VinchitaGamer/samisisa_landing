@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
             {/* Hamburger Mobile */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden p-2 text-gray-900 hover:bg-red-500 hover:text-white rounded transition"
+              className="lg:hidden p-2 text-gray-900 hover:bg-red-500 hover:text-white rounded transition min-w-[44px] min-h-[44px] flex items-center justify-center"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -106,8 +106,8 @@ const Layout = ({ children }) => {
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="bg-gray-900 text-white py-6 sm:py-8 md:py-12 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {/* Column 1: Brand */}
           <div>
             <h3 className="text-lg font-bold text-red-500 mb-4">Sami Sisa Expeditions</h3>
